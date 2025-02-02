@@ -20,10 +20,10 @@ I'm a **computer scientist** specializing in **web development**.
 
 ### 📚 Completed Courses & Books
 
-- [Eloquent Javacript by Marijn](#)
-- [Introduction to Computer Science Using Python. MIT](#)
-- [Systematic Program Design by Gregor Kiczales](#)
-- [JavaScript by David Flanagan](#)
+- [Eloquent Javacript by Marijn](https://eloquentjavascript.net/)
+- [Introduction to Computer Science Using Python. MIT](https://github.com/tsolawoyin2/ossu-cs-projects/tree/main/6.0001-assignments-solutions)
+- [Systematic Program Design by Gregor Kiczales](https://github.com/tsolawoyin2/ossu-cs-projects/tree/main/Space%20Invaders)
+- [JavaScript by David Flanagan](https://www.amazon.com/JavaScript-Definitive-Guide-Activate-Guides/dp/0596805527)
 
 
 ### 📫 Get in Touch
