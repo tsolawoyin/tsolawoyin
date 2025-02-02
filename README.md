@@ -1,11 +1,11 @@
 # 👋 Hi
 
-I'm a **computer scientist** specializing in **web development**.
+A **computer scientist** specializing in **web development**.
 
 ### 💡 Education
 
-- I'm a medical student at the **[University of Ibadan (MBBS)](https://com.ui.edu.ng/)**.
-- I'm currently studying **Computer Science** at **[OSSU (Open Source Society University)](https://github.com/ossu/computer-science)**.
+- **Medicine and Surgery (MBBS)** at the **[University of Ibadan](https://com.ui.edu.ng/)**.
+- **Computer Science** at **[OSSU (Open Source Society University)](https://github.com/ossu/computer-science)**.
 
 ### 🛠️ Web Development Stack
 
@@ -32,5 +32,5 @@ I'm a **computer scientist** specializing in **web development**.
 
 ### 📫 Get in Touch
 
-- Mail me @ t.olawoyin@outlook.com
+- t.olawoyin@outlook.com
 - [Discord](https://discord.com/users/tsolawoyin)
