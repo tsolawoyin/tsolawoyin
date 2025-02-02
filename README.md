@@ -5,7 +5,7 @@ A **computer scientist** specializing in **web development**.
 ### 💡 Education
 
 - **Medicine and Surgery (MBBS)** at the **[University of Ibadan](https://com.ui.edu.ng/)**.
-- **Computer Science** at **[OSSU (Open Source Society University)](https://github.com/ossu/computer-science)**.
+- **Computer Science** at **[OSSU (Open Source Society University)](https://cs.ossu.dev/)**.
 
 ### 🛠️ Web Development Stack
 
