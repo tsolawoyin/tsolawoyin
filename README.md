@@ -6,7 +6,7 @@ I'm a full-stack developer with a passion for building efficient, scalable, and 
 
 - **Full-Stack Development –** I build and maintain performant applications with a focus on seamless user experience.
 - **Scalable Architectures –** I design backend systems that handle data efficiently, ensuring smooth real-time updates.
-- **Problem-Solving –** As a [3kyu Codewars programmer](https://codewars.com/tsolawoyin), I enjoy tackling complex challenges and optimizing code for performance.
+- **Problem-Solving –** As a [3kyu Codewars programmer](https://codewars.com/users/tsolawoyin), I enjoy tackling complex challenges and optimizing code for performance.
 - **EdTech & Gamification –** I’m currently developing [Boots](https://boots5.netlify.app), a learning platform that blends education with engaging game mechanics.
 
 ### 🔥 Recent Projects
