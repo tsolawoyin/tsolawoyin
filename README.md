@@ -24,6 +24,10 @@ I'm a **computer scientist** specializing in **web development**.
 - [Introduction to Computer Science Using Python. MIT](https://github.com/tsolawoyin2/ossu-cs-projects/tree/main/6.0001-assignments-solutions)
 - [Systematic Program Design by Gregor Kiczales](https://github.com/tsolawoyin2/ossu-cs-projects/tree/main/Space%20Invaders)
 - [JavaScript by David Flanagan](https://www.amazon.com/JavaScript-Definitive-Guide-Activate-Guides/dp/0596805527)
+- [Paul's Algegbra](https://tutorial.math.lamar.edu/)
+- [College Algebra](https://www.amazon.com/Algebra-College-Students-Julie-Miller/dp/0072880562)
+- [Stewart's Precalculus](https://www.amazon.com/Precalculus-Mathematics-Calculus-Standalone-Book/dp/1305071751)
+- [Unscripted, MJ Demarco](https://www.amazon.com/UNSCRIPTED-Life-Liberty-Pursuit-Entrepreneurship/dp/0984358161)
 
 
 ### 📫 Get in Touch
