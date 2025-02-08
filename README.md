@@ -1,6 +1,6 @@
 # 👋 Hi
 
-A **computer scientist** specializing in **web development**.
+A **computer programmer** specializing in **web development**.
 
 ### 💡 Education
 
