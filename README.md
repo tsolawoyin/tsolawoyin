@@ -15,6 +15,7 @@ A **computer programmer** specializing in **web development**.
 
 ### 🔥 Recent Projects
 
+- **[UI Clearance Status Checker](https://github.com/tsolawoyin/ui-clearance-checker-2024-2025)**
 - **[Folafol Integrated Services](https://folafol.org)**
 - **[Boots](https://boots5.netlify.app)** 
 
