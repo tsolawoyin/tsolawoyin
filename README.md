@@ -4,6 +4,9 @@
 > Everything else is distraction. <br />
 > 2025 - 2032
 
+------------------------------------------------------------------
+Current year: 1 (2025)
+
 <!--
 **tsolawoyin/tsolawoyin** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
