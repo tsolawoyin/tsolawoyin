@@ -1,4 +1,8 @@
-## Hi there 👋
+## One thing is important right now!
+
+> To complete Computer Science alongside Medicine and Surgery in the next 7 years.
+> Everything else is distraction.
+> 2025 - 2032
 
 <!--
 **tsolawoyin/tsolawoyin** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
