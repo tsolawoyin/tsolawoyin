@@ -1,7 +1,7 @@
 ## One thing is important right now!
 
-> To complete Computer Science alongside Medicine and Surgery in the next 7 years.
-> Everything else is distraction.
+> To complete Computer Science alongside Medicine and Surgery in the next 7 years. <br />
+> Everything else is distraction. <br />
 > 2025 - 2032
 
 <!--
