@@ -26,7 +26,7 @@
 |⚪️|Status|
 |------|------|
 |🟢|Introduction to Computer Science and Programming using Python|
-|⚫️|Systemic Program Design|
+|⚫️|Systematic Program Design|
 |⚫️|Class-based Program Design|
 |⚫️|Programmng Languages, Part A|
 |⚫️|Programming Languages, Part B|
