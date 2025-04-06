@@ -23,7 +23,7 @@
 
 ### Computer Science
 
-|⚪️|Status|
+|⚪️|Course|
 |------|------|
 |🟢|Introduction to Computer Science and Programming using Python|
 |⚫️|Systematic Program Design|
