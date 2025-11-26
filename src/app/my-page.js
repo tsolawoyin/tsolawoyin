@@ -93,23 +93,15 @@ export default function Page() {
             </div>
           ))}
         </nav>
+        <footer className="mt-16 pt-8 border-t border-gray-200 flex justify-center gap-4">
+          <p className="text-gray-600 text-sm">
+            <a href="mailto:your.email@example.com">Mail </a>
+          </p>
+          <p className="text-gray-600 text-sm">
+            <a href="https://github.com/tsolawoyin">Github</a>
+          </p>
+        </footer>
       </div>
-      <footer className="mt-16 pt-8 border-t border-gray-200 flex justify-center gap-4">
-        <p className="text-gray-600 text-sm">
-          <a
-            href="mailto:your.email@example.com"
-          >
-            Mail{" "}
-          </a>
-        </p>
-        <p className="text-gray-600 text-sm">
-          <a
-            href="https://github.com/tsolawoyin"
-          >
-            Github
-          </a>
-        </p>
-      </footer>
     </div>
   );
 }
