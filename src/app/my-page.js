@@ -15,10 +15,12 @@ export default function Page() {
         {/* Header */}
         <header className="mb-12 pb-4 pt-8 border-b border-gray-300 grid">
           <div className="mb-4 grid gap-1">
-            <h1 className="text-5xl text-gray-800 font-bold">Temidayo</h1>
+            <h1 className="text-5xl text-gray-800 font-bold">Temidayo O.</h1>
             <div className="flex justify-between">
               <div>
-                <p className="text-gray-600">Programmer, Medical Student, Teacher, Writer, Book Wurm</p>
+                <p className="text-gray-600">
+                  Programmer, Medical Student, Teacher, Writer, Book Wurm
+                </p>
               </div>
               {/* <div className="flex gap-3 justify-end">
                 <p className="">
@@ -92,6 +94,22 @@ export default function Page() {
           ))}
         </nav>
       </div>
+      <footer className="mt-16 pt-8 border-t border-gray-200 flex justify-center gap-4">
+        <p className="text-gray-600 text-sm">
+          <a
+            href="mailto:your.email@example.com"
+          >
+            Mail{" "}
+          </a>
+        </p>
+        <p className="text-gray-600 text-sm">
+          <a
+            href="https://github.com/tsolawoyin"
+          >
+            Github
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }
