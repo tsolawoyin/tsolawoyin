@@ -1,4 +1,4 @@
-import {Poppins, Geist, Geist_Mono } from "next/font/google";
+import {Roboto, Geist, Geist_Mono, Ubuntu } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,8 +11,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const poppins = Poppins({
-  weight: ["100", "200", "300", "400", "500", "600", "700"],
+const ubuntu = Ubuntu({
+  weight: ["300", "400", "500", "700"],
   subsets: ["latin"]
 })
 
@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppins.className} antialiased`}
+        className={`${ubuntu.className} antialiased`}
       >
         {children}
       </body>
