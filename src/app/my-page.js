@@ -5,7 +5,7 @@ export default function Page() {
     {
       name: "Atlas",
       url: "https://atlashq.net",
-      description: "A free jamb practice software.",
+      description: "JAMB practice software",
     },
   ];
 
@@ -15,7 +15,7 @@ export default function Page() {
         {/* Header */}
         <header className="mb-12 pb-4 pt-8 border-b border-gray-300 grid">
           <div className="mb-4 grid gap-1">
-            <h1 className="text-5xl text-gray-800 font-bold">Temidayo O.</h1>
+            <h1 className="text-5xl font-bold">Temidayo O.</h1>
             <div className="flex justify-between">
               <div>
                 <p className="text-gray-600">
@@ -70,17 +70,17 @@ export default function Page() {
               href={"/study-tips"}
               className="text-gray-700 hover:text-gray-900 hover:underline transition-all"
             >
-              Study Tips
+              Study tips
             </Link>
           </div>
         </header>
 
         {/* Projects/Links Section */}
         <nav className="space-y-3">
-          <h3 className="text-3xl">Projects</h3>
+          <h3 className="text-4xl">Projects</h3>
           {projects.map((project, index) => (
             <div key={index} className="group">
-              <a
+              {/* <a
                 href={project.url}
                 target="_blank"
                 className="inline-block text-blue-600 hover:text-blue-800 underline text-lg font-medium"
@@ -89,7 +89,13 @@ export default function Page() {
               </a>
               <span className="text-gray-600 ml-2">
                 - {project.description}
-              </span>
+              </span> */}
+              <p className="text-3xl text-amber-700">
+                <a href={project.url} target="_blank">
+                  {project.name}
+                </a>
+              </p>
+              <p className="">{project.description}</p>
             </div>
           ))}
         </nav>

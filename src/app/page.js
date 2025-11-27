@@ -1,9 +1,9 @@
-import Portfolio from "./my-page";
+import Page from "./my-page";
 
 export default async function () {
   return (
     <div className="">
-      <Portfolio />
+      <Page />
     </div>
   );
 }

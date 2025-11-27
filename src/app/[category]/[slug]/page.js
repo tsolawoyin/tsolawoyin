@@ -1,42 +1,48 @@
 import { capitalize } from "lodash";
 import { getPost, getPosts } from "@/lib/hygraph";
-import { Suspense } from "react";
+import { RichText } from "@graphcms/rich-text-react-renderer";
+import { Ubuntu, Open_Sans } from "next/font/google";
 import Link from "next/link";
+
+const ubuntu = Open_Sans({
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+});
 
 const render = {
   h1: ({ children }) => {
     return (
-      <h1 className="my-8 pb-6 border-b-2 text-4xl font-bold border-gray-300">
+      <h1 className="my-8 pb-6 border-b-2 text-4xl font-semibold border-gray-300">
         {children}
       </h1>
     );
   },
   h2: ({ children }) => {
     return (
-      <h2 className="my-7 pb-5 border-b-2 text-3xl font-bold border-gray-300">
+      <h2 className="my-7 pb-5 border-b-2 text-3xl font-semibold border-gray-300">
         {children}
       </h2>
     );
   },
   h3: ({ children }) => {
     return (
-      <h3 className="my-6 pb-4 border-b text-2xl font-bold border-gray-200">
+      <h3 className="my-6 pb-4 border-b text-2xl font-semibold border-gray-200">
         {children}
       </h3>
     );
   },
   h4: ({ children }) => {
     return (
-      <h4 className="my-6 pb-4 border-b text-xl font-bold border-gray-200">
+      <h4 className="my-6 pb-4 border-b text-xl font-semibold border-gray-200">
         {children}
       </h4>
     );
   },
   h5: ({ children }) => {
-    return <h5 className="my-5 pb-3 text-lg font-bold">{children}</h5>;
+    return <h5 className="my-5 pb-3 text-lg font-semibold">{children}</h5>;
   },
   h6: ({ children }) => {
-    return <h6 className="my-4 text-base font-bold">{children}</h6>;
+    return <h6 className="my-4 text-base font-semibold">{children}</h6>;
   },
   p: ({ children }) => {
     return <p className="my-4 leading-7">{children}</p>;
@@ -87,7 +93,7 @@ const render = {
     return <hr className="my-8 border-gray-300" />;
   },
   strong: ({ children }) => {
-    return <strong className="font-bold">{children}</strong>;
+    return <strong className="font-semibold">{children}</strong>;
   },
   em: ({ children }) => {
     return <em className="italic">{children}</em>;
@@ -124,50 +130,29 @@ const render = {
   },
 };
 
-export function formatDate(dateString) {
-  const date = new Date(dateString);
+export default async function ({ params }) {
+  const { slug } = await params;
 
-  return date.toLocaleDateString("en-US", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-}
-
-export default async function Page({ params }) {
-  const { category } = await params;
-  const posts = await getPosts(category);
+  const content = await getPost(slug);
 
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
-      <h1 className="text-5xl font-bold mb-5">{capitalize(category)}</h1>
-      <Suspense fallback={<p>Loading...</p>}>
-        {posts.map((post) => {
-        //   console.log(post);
-          return (
-            <div>
-              <h3 className="hover:underline text-amber-800 text-2xl">
-                <Link href={`/${category}/${post.slug}`}>{post.title}</Link>
-              </h3>
-              <p className="text-xs text-gray-600">{formatDate(post.publishedAt)}</p>
-            </div>
-          );
-        })}
-      </Suspense>
+    <div>
+      <div className="border-y-2 py-3 mb-8 border-y-gray-600">
+        <h3>
+          <Link href={"/"}>Temidayo O.'s blog</Link>
+        </h3>
+      </div>
+      {content && (
+        <article className={ubuntu.className}>
+          <h2 className="text-3xl font-semibold mb-4 text-amber-800">
+            {content.title}
+          </h2>
+          <p className="text-lg text-gray-600 mb-8">{content.summary}</p>
+
+          {/* The prose class automatically styles all HTML elements */}
+          <RichText content={content.content.raw} renderers={render} />
+        </article>
+      )}
     </div>
   );
 }
-
-// {content && (
-//         <article>
-//           <h2 className="text-3xl font-bold mb-4">{content.title}</h2>
-//           <p className="text-lg text-gray-600 mb-8">{content.summary}</p>
-
-//           The prose class automatically styles all HTML elements
-//           <RichText
-//             content={content.content.raw}
-//             renderers={render}
-//           />
-//         </article>
-//       )}
