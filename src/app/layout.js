@@ -1,5 +1,6 @@
 import {Roboto, Geist, Geist_Mono, Ubuntu } from "next/font/google";
 import "./globals.css";
+import "./hygraph.css";
 
 const ubuntu = Ubuntu({
   weight: ["300", "400", "500", "700"],

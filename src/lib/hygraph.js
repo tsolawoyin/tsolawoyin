@@ -1,9 +1,26 @@
-import { Graffle } from "graffle";
+// lib/hygraph.js
+import { GraphQLClient } from "graphql-request";
 
-const hygraphClient = Graffle.create().transport({
-  url: process.env.HYGRAPH_ENDPOINT,
-});
+const endpoint = process.env.HYGRAPH_ENDPOINT;
 
-export const QUERIES = {
+// Create client WITHOUT authorization header for public content
+export const client = new GraphQLClient(endpoint);
 
+// Query function
+export async function getPost(slug) {
+  const query = `
+    query MyQuery {
+  post(where: {slug: "recte-sapere-fons"}) {
+    content {
+      html
+    }
+    title
+    summary
+  }
+}
+  `;
+
+  const variables = { slug };
+  const data = await client.request(query, variables);
+  return data.post;
 }
