@@ -9,6 +9,39 @@ const ubuntu = Open_Sans({
   subsets: ["latin"],
 });
 
+// Generate metadata for SEO
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const content = await getPost(slug);
+
+  if (!content) {
+    return {
+      title: "Post Not Found",
+      description: "The requested blog post could not be found.",
+    };
+  }
+
+  return {
+    title: content.title,
+    description: content.summary,
+    openGraph: {
+      title: content.title,
+      description: content.summary,
+      type: "article",
+    //   url: `https://yourdomain.com/blog/${slug}`,
+      // Add if you have an image field in your content
+      // images: [{ url: content.coverImage?.url }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: content.title,
+      description: content.summary,
+      // Add if you have an image field
+      // images: [content.coverImage?.url],
+    },
+  };
+}
+
 const render = {
   h1: ({ children }) => {
     return (
