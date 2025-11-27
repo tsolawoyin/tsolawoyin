@@ -1,7 +1,7 @@
 // lib/hygraph.js
 import { GraphQLClient } from "graphql-request";
 
-const endpoint = process.env.HYGRAPH_ENDPOINT;
+const endpoint = process.env.NEXT_PUBLIC_HYGRAPH_ENDPOINT;
 
 // Create client WITHOUT authorization header for public content
 export const client = new GraphQLClient(endpoint);
