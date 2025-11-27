@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${ubuntu.className} antialiased`}
+        className={`${ubuntu.className} antialiased px-5 py-16`}
       >
         {children}
       </body>

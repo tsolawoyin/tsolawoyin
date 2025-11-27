@@ -10,7 +10,7 @@ export default function Page() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#fffff8] text-gray-900 px-5 py-16">
+    <div className="min-h-screen text-gray-900">
       <div className="max-w-2xl mx-auto">
         {/* Header */}
         <header className="mb-12 pb-4 pt-8 border-b border-gray-300 grid">
@@ -49,25 +49,25 @@ export default function Page() {
           </p> */}
           <div className="grid">
             <Link
-              href="#"
+              href="/programming"
               className="text-gray-700 hover:text-gray-900 hover:underline transition-all"
             >
               Programming
             </Link>
             <Link
-              href={"#"}
+              href={"/medicine"}
               className="text-gray-700 hover:text-gray-900 hover:underline transition-all"
             >
               Medicine
             </Link>
             <Link
-              href={"#"}
+              href={"/history"}
               className="text-gray-700 hover:text-gray-900 hover:underline transition-all"
             >
               History
             </Link>
             <Link
-              href={"#"}
+              href={"/study-tips"}
               className="text-gray-700 hover:text-gray-900 hover:underline transition-all"
             >
               Study Tips
