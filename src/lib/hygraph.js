@@ -18,6 +18,7 @@ export async function getPost(slug) {
         }
         title
         summary
+        publishedAt
       }
     }
   `;

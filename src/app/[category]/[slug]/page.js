@@ -9,6 +9,17 @@ const ubuntu = Open_Sans({
   subsets: ["latin"],
 });
 
+export function formatDate(dateString) {
+  const date = new Date(dateString);
+
+  return date.toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
 // Generate metadata for SEO
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -28,7 +39,7 @@ export async function generateMetadata({ params }) {
       title: content.title,
       description: content.summary,
       type: "article",
-    //   url: `https://yourdomain.com/blog/${slug}`,
+      //   url: `https://yourdomain.com/blog/${slug}`,
       // Add if you have an image field in your content
       // images: [{ url: content.coverImage?.url }],
     },
@@ -177,9 +188,15 @@ export default async function ({ params }) {
       </div>
       {content && (
         <article className={ubuntu.className}>
-          <h2 className="text-3xl font-semibold mb-4 text-amber-800">
-            {content.title}
-          </h2>
+          <div className="mb-4">
+            <h2 className="text-3xl font-semibold text-amber-800">
+              {content.title}
+            </h2>
+            <p className="text-xs text-gray-600">
+              {formatDate(content.publishedAt)}
+            </p>
+          </div>
+
           <p className="text-lg text-gray-600 mb-8">{content.summary}</p>
 
           {/* The prose class automatically styles all HTML elements */}
