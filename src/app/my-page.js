@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function Page() {
   const projects = [
-    {
-      name: "Atlas",
-      url: "https://atlashq.net",
-      description: "JAMB practice software",
-    },
+    // {
+    //   name: "Atlas",
+    //   url: "https://atlashq.net",
+    //   description: "JAMB practice software",
+    // },
   ];
 
   return (
