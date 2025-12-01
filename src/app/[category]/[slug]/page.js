@@ -1,11 +1,14 @@
 import { capitalize } from "lodash";
 import { getPost, getPosts } from "@/lib/hygraph";
 import { RichText } from "@graphcms/rich-text-react-renderer";
-import { Ubuntu, Open_Sans } from "next/font/google";
+import { Ubuntu, Open_Sans, Space_Mono, Oxanium } from "next/font/google";
 import Link from "next/link";
 
-const ubuntu = Open_Sans({
-  weight: ["300", "400", "500", "700"],
+const ubuntu = Oxanium({
+  // weight: ["300", "400", "500", "700"],
+  weight:["200", "300", "400", "500", "600", "700", "800"],
+  // weight: ["400", "700"],
+  // weight: ["200", "300"]
   subsets: ["latin"],
 });
 
@@ -55,32 +58,16 @@ export async function generateMetadata({ params }) {
 
 const render = {
   h1: ({ children }) => {
-    return (
-      <h1 className="my-8 pb-6 border-b-2 text-4xl font-semibold border-gray-300">
-        {children}
-      </h1>
-    );
+    return <h1 className="my-8 pb-6 text-4xl font-semibold">{children}</h1>;
   },
   h2: ({ children }) => {
-    return (
-      <h2 className="my-7 pb-5 border-b-2 text-3xl font-semibold border-gray-300">
-        {children}
-      </h2>
-    );
+    return <h2 className="my-7 pb-5 text-3xl font-semibold">{children}</h2>;
   },
   h3: ({ children }) => {
-    return (
-      <h3 className="my-6 pb-4 border-b text-2xl font-semibold border-gray-200">
-        {children}
-      </h3>
-    );
+    return <h3 className="my-6 text-2xl font-semibold">{children}</h3>;
   },
   h4: ({ children }) => {
-    return (
-      <h4 className="my-6 pb-4 border-b text-xl font-semibold border-gray-200">
-        {children}
-      </h4>
-    );
+    return <h4 className="my-6 text-xl font-semibold">{children}</h4>;
   },
   h5: ({ children }) => {
     return <h5 className="my-5 pb-3 text-lg font-semibold">{children}</h5>;
@@ -91,13 +78,13 @@ const render = {
   p: ({ children }) => {
     return <p className="my-4 leading-7">{children}</p>;
   },
-  a: ({ children, href }) => {
-    return (
-      <a href={href} className="text-blue-600 hover:text-blue-800 underline">
-        {children}
-      </a>
-    );
-  },
+  // a: ({ children, href }) => {
+  //   return (
+  //     <a href={href} className="text-blue-600 hover:text-blue-800 underline">
+  //       {children}
+  //     </a>
+  //   );
+  // },
   ul: ({ children }) => {
     return <ul className="my-4 ml-6 list-disc space-y-2">{children}</ul>;
   },
@@ -116,7 +103,7 @@ const render = {
   },
   code: ({ children }) => {
     return (
-      <code className="bg-gray-100 rounded px-1.5 py-0.5 text-sm font-mono">
+      <code className="bg-slate-100 text-slate-800 rounded-md px-2 py-1 text-sm font-mono shadow-sm ring-1 ring-slate-200">
         {children}
       </code>
     );
@@ -180,7 +167,7 @@ export default async function ({ params }) {
   const content = await getPost(slug);
 
   return (
-    <div>
+    <div className="max-w-[750px] mx-auto">
       <div className="border-y-2 py-3 mb-8 border-y-gray-600">
         <h3>
           <Link href={"/"}>Temidayo O.'s blog</Link>
