@@ -1,17 +1,18 @@
-import {Roboto, Geist, Geist_Mono, Ubuntu } from "next/font/google";
+import { Ubuntu } from "next/font/google";
 import "./globals.css";
+import type { Metadata } from "next";
 
 const ubuntu = Ubuntu({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"]
 })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Temidayo Olawoyin",
   description: "Portfolio website",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body

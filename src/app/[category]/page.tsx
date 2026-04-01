@@ -1,10 +1,10 @@
 import { capitalize } from "lodash";
-import { getPost, getPosts } from "@/lib/hygraph";
+import { getPosts } from "@/lib/posts";
 import { Suspense } from "react";
 import Link from "next/link";
 
 
-export function formatDate(dateString) {
+function formatDate(dateString: string) {
   const date = new Date(dateString);
 
   return date.toLocaleDateString("en-US", {
@@ -15,7 +15,7 @@ export function formatDate(dateString) {
   });
 }
 
-export default async function Page({ params }) {
+export default async function Page({ params }: { params: Promise<{ category: string }> }) {
   const { category } = await params;
   const posts = await getPosts(category);
 
@@ -26,7 +26,7 @@ export default async function Page({ params }) {
         {posts.map((post) => {
         //   console.log(post);
           return (
-            <div>
+            <div key={post.slug}>
               <h3 className="hover:underline text-amber-800 text-2xl">
                 <Link href={`/${category}/${post.slug}`}>{post.title}</Link>
               </h3>
