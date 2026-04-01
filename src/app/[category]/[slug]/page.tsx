@@ -170,7 +170,7 @@ export default async function SlugPage({ params }: { params: Promise<{ slug: str
     <div className="max-w-[750px] mx-auto">
       <div className="border-y-2 py-3 mb-8 border-y-gray-600">
         <h3>
-          <Link href={"/"}>Temidayo O.&apos;s blog</Link>
+          <Link href={"/"}>Temidayo OS</Link>
         </h3>
       </div>
       {content && (
