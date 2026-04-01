@@ -31,6 +31,7 @@ export async function getPost(slug: string): Promise<Post | null> {
     if (fs.existsSync(filePath)) {
       const raw = fs.readFileSync(filePath, "utf-8");
       const { data, content } = matter(raw);
+      if (data.draft) return null;
       return {
         title: data.title,
         summary: data.summary,
@@ -49,17 +50,20 @@ export async function getPosts(category: string): Promise<PostListItem[]> {
 
   const files = fs.readdirSync(categoryDir).filter((f) => f.endsWith(".md"));
 
-  const posts: PostListItem[] = files.map((file) => {
-    const raw = fs.readFileSync(path.join(categoryDir, file), "utf-8");
-    const { data } = matter(raw);
-    return {
-      slug: file.replace(/\.md$/, ""),
-      title: data.title,
-      summary: data.summary,
-      publishedAt: data.publishedAt,
-      category: data.category ?? category,
-    };
-  });
+  const posts: PostListItem[] = files
+    .map((file) => {
+      const raw = fs.readFileSync(path.join(categoryDir, file), "utf-8");
+      const { data } = matter(raw);
+      if (data.draft) return null;
+      return {
+        slug: file.replace(/\.md$/, ""),
+        title: data.title,
+        summary: data.summary,
+        publishedAt: data.publishedAt,
+        category: data.category ?? category,
+      };
+    })
+    .filter((post): post is PostListItem => post !== null);
 
   posts.sort(
     (a, b) =>

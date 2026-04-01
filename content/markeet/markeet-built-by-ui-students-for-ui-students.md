@@ -1,8 +1,9 @@
 ---
-title: "Markeet — Built by UI Students, for UI Students"
+title: "Markeet  Built by UI Students, for UI Students"
 summary: "An introduction to Markeet, a student-built web app designed to help University of Ibadan students buy and sell items easily, safely, and without distractions."
 publishedAt: "2025-12-19T15:32:04.899618+00:00"
 category: "markeet"
+draft: true
 ---
 
 Hello fellow UItes 👋🏽

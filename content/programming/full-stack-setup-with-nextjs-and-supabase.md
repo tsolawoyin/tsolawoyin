@@ -3,6 +3,7 @@ title: "Full Stack Setup With Next.js and Supabase"
 summary: "A documentation of the process to setup a full stack application with Next.js and Supabase. As a bonus, I will include setting up Shadcn UI and enabling darkmode."
 publishedAt: "2025-12-01T05:08:24.131242+00:00"
 category: "programming"
+draft: true
 ---
 
 ### Next.js

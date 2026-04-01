@@ -3,6 +3,7 @@ title: "Built by UI Students, for UI Students"
 summary: "Markeet is a student-built marketplace created by UI students for UI students. Its growth depends on community participation—joining, listing items, and supporting one another."
 publishedAt: "2025-12-21T00:49:06.571926+00:00"
 category: "markeet"
+draft: true
 ---
 
 Markeet is not a company product.  

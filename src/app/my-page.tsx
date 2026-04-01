@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { Plus } from "lucide-react";
+import { Plus, Github } from "lucide-react";
 import { useState } from "react";
 import type { PostListItem } from "@/lib/posts";
 
-const categories = ["programming", "medicine"] as const;
+// const categories = ["programming", "markeet", "study-tips"] as const;
 
 function formatDate(dateString: string) {
   const date = new Date(dateString);
@@ -40,7 +40,7 @@ export default function Page({ posts }: { posts: PostListItem[] }) {
               </div>
             </div>
           </div>
-          <div className="flex gap-4">
+          {/* <div className="flex gap-4">
             {categories.map((category) => (
               <button
                 key={category}
@@ -58,14 +58,14 @@ export default function Page({ posts }: { posts: PostListItem[] }) {
                 {category.charAt(0).toUpperCase() + category.slice(1)}
               </button>
             ))}
-          </div>
+          </div> */}
         </header>
 
         {/* Blog listing */}
         <section className="grid gap-3">
           {filteredPosts.map((post) => (
             <div key={post.slug}>
-              <h3 className="hover:underline text-amber-800 text-2xl">
+              <h3 className="hover:underline text-amber-800 text-xl">
                 <Link href={`/${post.category}/${post.slug}`}>
                   {post.title}
                 </Link>
@@ -77,13 +77,10 @@ export default function Page({ posts }: { posts: PostListItem[] }) {
           ))}
         </section>
 
-        <footer className="mt-16 pt-8 flex justify-center gap-4">
-          <p className="text-gray-600 text-sm">
-            <a href="mailto:your.email@example.com">Mail </a>
-          </p>
-          <p className="text-gray-600 text-sm">
-            <a href="https://github.com/tsolawoyin">Github</a>
-          </p>
+        <footer className="mt-16 pt-8 flex justify-center">
+          <a href="https://github.com/tsolawoyin" className="text-gray-600 hover:text-gray-900 transition-colors">
+            <Github size={20} />
+          </a>
         </footer>
       </div>
     </div>
