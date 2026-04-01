@@ -3,8 +3,13 @@
 import Link from "next/link";
 import { Plus, Github } from "lucide-react";
 import { useState } from "react";
+import { JetBrains_Mono } from "next/font/google";
 import type { PostListItem } from "@/lib/posts";
 
+const jetbrains = JetBrains_Mono({
+  weight: ["400", "500", "600"],
+  subsets: ["latin"],
+});
 // const categories = ["programming", "markeet", "study-tips"] as const;
 
 function formatDate(dateString: string) {
@@ -30,7 +35,7 @@ export default function Page({ posts }: { posts: PostListItem[] }) {
         {/* Header */}
         <header className="pb-4 pt-8 grid">
           <div className="mb-4 grid gap-1">
-            <h1 className="text-5xl font-bold">Temidayo OS</h1>
+            <h1 className={`text-5xl font-bold ${jetbrains.className}`}>T'OS</h1>
             <div className="flex justify-between">
               <div>
                 <p className="text-gray-600 flex italic gap-1 items-center">

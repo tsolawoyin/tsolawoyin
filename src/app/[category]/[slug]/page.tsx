@@ -5,10 +5,16 @@ import { Oxanium } from "next/font/google";
 import Link from "next/link";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { JetBrains_Mono } from "next/font/google";
+
+const jetbrains = JetBrains_Mono({
+  weight: ["400", "500", "600"],
+  subsets: ["latin"],
+});
 
 const ubuntu = Oxanium({
   // weight: ["300", "400", "500", "700"],
-  weight:["200", "300", "400", "500", "600", "700", "800"],
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
   // weight: ["400", "700"],
   // weight: ["200", "300"]
   subsets: ["latin"],
@@ -26,7 +32,11 @@ function formatDate(dateString: string) {
 }
 
 // Generate metadata for SEO
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
   const { slug } = await params;
   const content = await getPost(slug);
 
@@ -96,9 +106,16 @@ const components = {
       </blockquote>
     );
   },
-  code: ({ children, className }: { children?: ReactNode; className?: string }) => {
+  code: ({
+    children,
+    className,
+  }: {
+    children?: ReactNode;
+    className?: string;
+  }) => {
     // Block code (inside <pre>) gets a className like "language-js" from remark
-    const isBlock = typeof className === "string" && className.startsWith("language-");
+    const isBlock =
+      typeof className === "string" && className.startsWith("language-");
     if (isBlock) {
       return <code className={className}>{children}</code>;
     }
@@ -117,7 +134,11 @@ const components = {
   },
   img: (props: React.ImgHTMLAttributes<HTMLImageElement>) => {
     return (
-      <img src={props.src} alt={props.alt ?? ""} className="my-6 rounded-lg max-w-full h-auto" />
+      <img
+        src={props.src}
+        alt={props.alt ?? ""}
+        className="my-6 rounded-lg max-w-full h-auto"
+      />
     );
   },
   hr: () => {
@@ -161,7 +182,11 @@ const components = {
   },
 };
 
-export default async function SlugPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function SlugPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
 
   const content = await getPost(slug);
@@ -169,8 +194,8 @@ export default async function SlugPage({ params }: { params: Promise<{ slug: str
   return (
     <div className="max-w-[750px] mx-auto">
       <div className="border-y-2 py-3 mb-8 border-y-gray-600">
-        <h3>
-          <Link href={"/"}>Temidayo OS</Link>
+        <h3 className={jetbrains.className}>
+          <Link href={"/"}>T'OS</Link>
         </h3>
       </div>
       {content && (
