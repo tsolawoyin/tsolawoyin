@@ -31,7 +31,7 @@ const github_user = {
         "next.js",  // fullstack framework
         "supabase", // database
         "dexie", // indexed db manager
-        "tailwind", // styles
+        "shadcn+tailwind", // user interface
     ],
     education: {
         university: "University of Ibadan, Nigeria",
